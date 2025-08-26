@@ -2,38 +2,17 @@
 
 A comprehensive HR application built for the NEWWORK take-home assignment. This single-page application provides role-based employee profile management with feedback systems and absence request functionality.
 
-## 🚀 Features
+## Assignment Requirements
 
-### Core Functionality
+**Manager/Employee Owner Permissions**: Can see and change all data  
+**Co-worker Permissions**: Can see non-sensitive data and leave feedback  
+**Employee Permissions**: Can request absence  
+**AI Feedback Polishing**: Optional AI enhancement of feedback text  
+**Professional UI**: Clean, modern interface suitable for enterprise use  
+**Role-Based Access**: Comprehensive permission system  
+**Single Page Application**: Built with Next.js App Router
 
-- **Role-Based Access Control**: Three user roles with different permissions
-  - **Manager**: Full access to all employee data, team management, and approval workflows
-  - **Employee**: Access to own profile, feedback viewing, and absence requests
-  - **Co-worker**: View public profiles and leave feedback for colleagues
-
-### Employee Profile Management
-
-- View and edit employee profiles with role-based permissions
-- Sensitive data protection (salary, address, emergency contacts)
-- Professional profile cards with comprehensive employee information
-- Real-time profile updates with form validation
-
-### Feedback System with AI Enhancement
-
-- Leave feedback for colleagues with optional AI polishing
-- Mock AI service that enhances feedback with professional language
-- View feedback history with original/polished content comparison
-- Role-based feedback permissions and visibility
-
-### Absence Request Management
-
-- Submit time-off requests with date validation
-- Manager approval workflow for pending requests
-- Status tracking (pending, approved, rejected)
-- Statistics dashboard for request overview
-- Multiple absence types (vacation, sick leave, personal, other)
-
-## 🛠 Technology Stack
+## Technology Stack
 
 - **Frontend**: Next.js 14 with App Router
 - **UI Components**: shadcn/ui with Tailwind CSS
@@ -43,7 +22,7 @@ A comprehensive HR application built for the NEWWORK take-home assignment. This 
 - **Icons**: Lucide React
 - **Styling**: Tailwind CSS v4 with custom design tokens
 
-## 🎨 Design System
+## Design System
 
 ### Color Palette
 
@@ -51,7 +30,7 @@ A comprehensive HR application built for the NEWWORK take-home assignment. This 
 - **Success**: Green (#16a34a) - Approvals and positive actions
 - **Warning**: Yellow (#ca8a04) - Pending states and cautions
 - **Error**: Red (#dc2626) - Rejections and errors
-- **Neutral**: Gray scale for backgrounds and text
+- **Neutral**: Grey scale for backgrounds and text
 
 ### Typography
 
@@ -59,7 +38,7 @@ A comprehensive HR application built for the NEWWORK take-home assignment. This 
 - **Body**: GeistSans regular and medium
 - **Monospace**: GeistMono for technical content
 
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -73,27 +52,17 @@ A comprehensive HR application built for the NEWWORK take-home assignment. This 
 
    # If using GitHub integration
 
-   git clone [repository-url]
-   cd newwork-hr-app
+   git clone [[repository-url]](https://github.com/ZubairKh/hrm-app-v1.git)
+   cd hrm-app-v1
    \`\`\`
 
 2. **Install dependencies**
    \`\`\`bash
    npm install
 
-   # or
-
-   yarn install
-   \`\`\`
-
 3. **Start the development server**
    \`\`\`bash
    npm run dev
-
-   # or
-
-   yarn dev
-   \`\`\`
 
 4. **Open your browser**
    Navigate to `http://localhost:3000`
@@ -108,11 +77,11 @@ The application includes three demo accounts to test different user roles:
 | **Employee**  | sarah.johnson@newwork.com | Own profile + absence requests |
 | **Co-worker** | alex.rivera@newwork.com   | Public profiles + feedback     |
 
-## 📱 User Interface
+## User Interface
 
 ### Navigation
 
-- Clean, professional navigation bar with role-based menu items
+- Navigation bar with role-based menu items
 - User avatar and role badge for easy identification
 - Responsive design that works on desktop and mobile
 
@@ -130,7 +99,7 @@ The application includes three demo accounts to test different user roles:
 - **Form Validation**: Real-time validation with clear error messages
 - **Responsive Design**: Mobile-first approach with desktop enhancements
 
-## 🔐 Security & Permissions
+## Security & Permissions
 
 ### Role-Based Access Control
 
@@ -147,11 +116,11 @@ canApproveAbsence(userRole)
 
 ### Data Protection
 
-- Sensitive employee data (salary, address, emergency contacts) only visible to managers and profile owners
+- Sensitive employee data (salary, address, emergency contacts) is only visible to managers and profile owners
 - Feedback visibility controlled by role and authorship
-- Absence requests private to employee and managers
+- Absence requests are private to the employee and managers
 
-## 🤖 AI Features
+## AI Features
 
 ### Feedback Enhancement
 
@@ -162,7 +131,7 @@ The application includes a mock AI polishing service that:
 - Maintains original content for comparison
 - Simulates real AI integration (ready for Groq/OpenAI integration)
 
-## 📊 Data Structure
+## Data Structure
 
 ### Employee Profile
 
@@ -216,13 +185,12 @@ createdAt: string
 }
 \`\`\`
 
-## 🔧 Architecture
+## Architecture
 
 ### Context Providers
 
 - **AuthContext**: User authentication and session management
 - **DataContext**: Application data and CRUD operations
-- **PermissionContext**: Role-based access control logic
 
 ### Component Structure
 
@@ -253,28 +221,7 @@ app/
 │ └── employee/[id]/page.tsx
 \`\`\`
 
-## 🚀 Deployment
-
-### Vercel Deployment (Recommended)
-
-1. Click the "Publish" button in the v0 interface
-2. Connect your GitHub repository
-3. Deploy automatically with Vercel
-
-### Manual Deployment
-
-\`\`\`bash
-
-# Build the application
-
-npm run build
-
-# Start production server
-
-npm start
-\`\`\`
-
-## 🔮 Future Enhancements
+## Future Enhancements
 
 ### Potential Integrations
 
@@ -282,7 +229,6 @@ npm start
 - **AI Services**: Groq or OpenAI for actual feedback polishing
 - **Email Notifications**: For absence request approvals
 - **Calendar Integration**: Google Calendar sync for approved time off
-- **File Uploads**: Profile pictures and document attachments
 
 ### Additional Features
 
@@ -290,23 +236,3 @@ npm start
 - **Goal Tracking**: Employee objectives and KPIs
 - **Time Tracking**: Work hours and productivity metrics
 - **Reporting**: Analytics dashboard for HR insights
-
-## 📝 Assignment Requirements
-
-This application fulfills all requirements from the NEWWORK take-home assignment:
-
-✅ **Manager/Employee Owner Permissions**: Can see and change all data  
-✅ **Co-worker Permissions**: Can see non-sensitive data and leave feedback  
-✅ **Employee Permissions**: Can request absence  
-✅ **AI Feedback Polishing**: Optional AI enhancement of feedback text  
-✅ **Professional UI**: Clean, modern interface suitable for enterprise use  
-✅ **Role-Based Access**: Comprehensive permission system  
-✅ **Single Page Application**: Built with Next.js App Router
-
-## 🤝 Contributing
-
-This is a take-home assignment project. For questions or clarifications, please contact the development team.
-
-## 📄 License
-
-This project is created for the NEWWORK take-home assignment evaluation.
