@@ -105,14 +105,15 @@ The application includes three demo accounts to test different user roles:
 
 The application implements comprehensive permission checking:
 
-\`\`\`typescript
+```typescript
 // Example permission checks
 canViewProfile(targetEmployeeId, userRole, userEmployeeId)
 canEditProfile(targetEmployeeId, userRole, userEmployeeId)
 canViewSensitiveData(targetEmployeeId, userRole, userEmployeeId)
 canLeaveFeedback(targetEmployeeId, userRole, userEmployeeId)
 canApproveAbsence(userRole)
-\`\`\`
+```
+
 
 ### Data Protection
 
@@ -135,7 +136,7 @@ The application includes a mock AI polishing service that:
 
 ### Employee Profile
 
-\`\`\`typescript
+```typescript
 interface Employee {
 id: string
 name: string
@@ -153,11 +154,11 @@ phone: string
 relationship: string
 }
 }
-\`\`\`
+```
 
 ### Feedback System
 
-\`\`\`typescript
+```typescript
 interface Feedback {
 id: string
 employeeId: string
@@ -168,11 +169,11 @@ isPolished: boolean
 originalContent?: string
 createdAt: string
 }
-\`\`\`
+```
 
 ### Absence Requests
 
-\`\`\`typescript
+```typescript
 interface AbsenceRequest {
 id: string
 employeeId: string
@@ -183,7 +184,7 @@ reason: string
 status: "pending" | "approved" | "rejected"
 createdAt: string
 }
-\`\`\`
+```
 
 ## Architecture
 
@@ -194,7 +195,7 @@ createdAt: string
 
 ### Component Structure
 
-\`\`\`
+```typescript
 components/
 ├── ui/ # shadcn/ui base components
 ├── navigation.tsx # Main navigation bar
@@ -205,11 +206,11 @@ components/
 ├── absence-request-list.tsx
 ├── permission-guard.tsx
 └── role-badge.tsx
-\`\`\`
+```
 
 ### Pages Structure
 
-\`\`\`
+```
 app/
 ├── page.tsx # Root redirect
 ├── login/page.tsx # Authentication
@@ -219,7 +220,7 @@ app/
 │ ├── feedback/page.tsx
 │ ├── absence/page.tsx
 │ └── employee/[id]/page.tsx
-\`\`\`
+```
 
 ## Future Enhancements
 
@@ -236,3 +237,8 @@ app/
 - **Goal Tracking**: Employee objectives and KPIs
 - **Time Tracking**: Work hours and productivity metrics
 - **Reporting**: Analytics dashboard for HR insights
+
+## hrm-app-v2
+
+I have also created it's v2 in a sense of less focused on the UI but more focused on backend and DB using prisma. For more details please visit this repo
+[hrm-app-v2](https://github.com/ZubairKh/hrm-app-v2)
